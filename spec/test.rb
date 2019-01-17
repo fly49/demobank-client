@@ -1,4 +1,5 @@
 require 'webmock/rspec'
+require 'spec_helper'
 require 'demobank-client'
 
 describe DemoBankClient do
@@ -25,15 +26,6 @@ describe DemoBankClient do
     WebMock.disable_net_connect!
   end
   
-  describe '#auth_token' do
-    before do
-      login_get.to_return(status: 200, body: auth_token_form)
-    end
-    it 'should return correct auth token' do
-      expect(client.send(:auth_token)).to eq auth_token
-    end
-  end
-
   describe '#login' do
     before do
       login_get.to_return(status: 200, body: auth_token_form)
@@ -58,6 +50,15 @@ describe DemoBankClient do
       it 'should return false' do
         expect(client.login(credentials)).to eq false
       end
+    end
+  end
+  
+  describe '#auth_token' do
+    before do
+      login_get.to_return(status: 200, body: auth_token_form)
+    end
+    it 'should return correct auth token' do
+      expect(client.send(:auth_token)).to eq auth_token
     end
   end
   
