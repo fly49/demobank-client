@@ -1,11 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "demobank-client"
 
 Gem::Specification.new do |spec|
   spec.name          = "demobank-client"
-  spec.version       = DemoBankClient::VERSION
+  spec.version       = 0.1.0
   spec.authors       = ["flymypie"]
   spec.email         = ["flymaipie@gmail.com"]
 
