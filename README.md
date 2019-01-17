@@ -1,5 +1,12 @@
 # DemoBank-Client
 An HTTP client for DemoBank.
+## Requirements
+You need next gems pre-installed:
+```
+gem 'faraday', "~> 0.15.3" 
+gem 'faraday-cookie_jar', "~> 0.0.6"
+gem 'nokogiri', "~> 1.8"
+```
 ## Installation
 1. `git clone git://github.com/fly49/demobank-client.git`
 2. `cd demobank-client`
