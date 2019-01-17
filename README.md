@@ -13,7 +13,7 @@ require 'demobank-client`
 client = DemoBankClient.new
 client.login(username: 'customer', password: 'qwerty') # => true/false
 ```
-If it logged in successfully, you could access to your accounts information:
+If it logged in successfully, you can get your accounts information:
 ```
 client.accounts # => [ { type: :current, balance: 100, currency: 'USD' } ]
 ```
